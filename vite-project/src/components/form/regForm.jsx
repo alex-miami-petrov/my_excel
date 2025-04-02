@@ -6,6 +6,7 @@ import s from "./regForm.module.css";
 import { registerUser } from "../../api/api.js";
 import "izitoast/dist/css/iziToast.min.css";
 import iziToast from "izitoast";
+import flag from "../../img/flag.png";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Обов'язкове поле"),
@@ -62,37 +63,39 @@ const RegForm = () => {
               className={s.input}
             />
             <ErrorMessage name="email" component="div" className={s.error} />
-
-            <Field
-              name="phone"
-              placeholder="+380 95 -- --- --"
-              className={s.input}
-            />
+            <div className={s.phoneInputWrapper}>
+              <img
+                className={s.flagIcon}
+                src={flag}
+                alt="flag"
+                width="24"
+                height="16"
+              />
+              <Field
+                name="phone"
+                placeholder="+380 95 -- --- --"
+                className={s.input}
+              />
+            </div>
             <ErrorMessage name="phone" component="div" className={s.error} />
 
             <label className={s.agreementLabel}>
-              <div className="wrap">
-                <Field
-                  type="checkbox"
-                  name="agreement"
-                  className={s.checkbox}
-                />
-                <div className={s.checkWrap}>
-                  <p>
-                    Згоден з
-                    <span className={s.span}>
-                      <a href="#" className={s.link}>
-                        Політикою конфіденційності
-                      </a>
-                    </span>
-                    та
-                    <span className={s.span}>
-                      <a href="#" className={s.link}>
-                        Умовами користування послугами
-                      </a>
-                    </span>
-                  </p>
-                </div>
+              <Field type="checkbox" name="agreement" className={s.checkbox} />
+              <div className={s.checkWrap}>
+                <p className={s.checkText}>
+                  Згоден з
+                  <span className={s.span}>
+                    <a href="#" className={s.link}>
+                      Політикою конфіденційності
+                    </a>
+                  </span>
+                  та
+                  <span className={s.span}>
+                    <a href="#" className={s.link}>
+                      Умовами користування послугами
+                    </a>
+                  </span>
+                </p>
               </div>
             </label>
             <ErrorMessage
