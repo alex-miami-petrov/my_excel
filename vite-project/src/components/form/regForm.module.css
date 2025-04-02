@@ -1,9 +1,10 @@
 .input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 12px 16px;
+  width: 280px;
+
+  background-color: #f2f4fa;
+  border: none;
+  margin-bottom: 20px;
 }
 
 .error {
@@ -13,21 +14,77 @@
 
 .agreementLabel {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 12px;
+  max-width: 320px;
 }
 
 .checkbox {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
   margin-right: 5px;
 }
 
-.link {
+.checkbox::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 4px;
+}
+
+.checkbox:checked::before {
+  border: green;
+}
+
+.checkbox:checked::before {
+  content: "✓";
+  font-size: 16px;
   color: #0f7c41;
+}
+
+.link {
   text-decoration: none;
+  color: #3577f7;
+  margin-right: 2px;
 }
 
 .loading {
   text-align: center;
   margin-bottom: 10px;
   color: #0f7c41;
+}
+
+.regBut {
+  background-color: #0f7c41;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+  width: 280px;
+  height: 56px;
+  margin: 0 auto;
+  transition: background-color 0.5s ease;
+}
+
+.regBut:hover,
+.regBut:hover {
+  background-color: darkcyan;
+}
+
+.span {
+  margin-left: 2px;
 }

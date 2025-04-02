@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .modalOverlay {
@@ -20,8 +22,8 @@
 
 .modalContent {
   background-color: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding-top: 30px;
+
   max-width: 360px;
   height: 60%;
 }
@@ -31,4 +33,11 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+}
+
+.countTitle {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 24px;
+  text-align: center;
 }

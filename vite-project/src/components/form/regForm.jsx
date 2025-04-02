@@ -72,14 +72,22 @@ const RegForm = () => {
 
             <label className={s.agreementLabel}>
               <Field type="checkbox" name="agreement" className={s.checkbox} />
-              Згоден з{" "}
-              <a href="#" className={s.link}>
-                Політикою конфіденційності
-              </a>{" "}
-              та{" "}
-              <a href="#" className={s.link}>
-                Умовами користування послугами
-              </a>
+              <div className={s.checkWrap}>
+                <p>
+                  Згоден з
+                  <span className={s.span}>
+                    <a href="#" className={s.link}>
+                      Політикою конфіденційності
+                    </a>
+                  </span>
+                  та
+                  <span className={s.span}>
+                    <a href="#" className={s.link}>
+                      Умовами користування послугами
+                    </a>
+                  </span>
+                </p>
+              </div>
             </label>
             <ErrorMessage
               name="agreement"
