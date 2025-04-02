@@ -1,0 +1,26 @@
+.countContainer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Додаємо фон для прикладу */
+}
+
+.countTitle {
+  color: #007bff; /* Колір заголовка */
+  margin-bottom: 20px;
+}
+
+.countTime {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.regBut {
+  background-color: #28a745; /* Зелений колір кнопки */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
