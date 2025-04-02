@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import s from "./countdownTimer.module.css";
 
 function CountdownTimer() {
-  const targetDate = new Date("2025-03-01T00:00:00Z").getTime();
+  const targetDate = new Date("2025-05-01T00:00:00Z").getTime();
   const [timeRemaining, setTimeRemaining] = useState(targetDate - Date.now());
 
   useEffect(() => {
@@ -14,6 +14,10 @@ function CountdownTimer() {
   }, [targetDate]);
 
   const formatTime = (time) => {
+    if (time <= 0) {
+      return "00 Днів : 00 Годин : 00 Хвилин : 00 Секунд";
+    }
+
     const days = Math.floor(time / (1000 * 60 * 60 * 24));
     const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((time / (1000 * 60)) % 60);

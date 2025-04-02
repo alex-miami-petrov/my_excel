@@ -1,7 +1,8 @@
 import React from "react";
 import s from "./hero.module.css";
 import Container from "../container/container";
-import arMob from "../../img/ar-mob.png";
+import arMob from "../../img/arMob.png";
+import CountdownTimer from "../countdownTimer/countdownTimer.jsx";
 // import icons from "../../img/icons.svg";
 
 const Hero = () => {
@@ -23,6 +24,7 @@ const Hero = () => {
           <use href={`${icons}#icon-arrow-mob`} />
         </svg> */}
         <img src={arMob} alt="arrow" width="40" height="40" />
+        <CountdownTimer />
       </Container>
     </section>
   );
