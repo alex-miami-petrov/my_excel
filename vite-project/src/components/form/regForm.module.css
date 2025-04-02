@@ -89,6 +89,7 @@
 }
 
 .regBut {
+  display: block;
   background-color: #0f7c41;
   color: white;
   font-size: 16px;
