@@ -1,12 +1,11 @@
 .countContainer {
   text-align: center;
-  padding: 20px;
-  background-color: #f0f0f0; /* Додаємо фон для прикладу */
+  padding: 20px 32px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
 }
 
 .countTitle {
-  color: #007bff; /* Колір заголовка */
-  margin-bottom: 20px;
 }
 
 .countTime {

@@ -1,0 +1,31 @@
+.heroSub {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 16px;
+  letter-spacing: 0.08em;
+  color: #0f7c41;
+  padding: 4px 8px;
+  border: 0.4px solid #0f7c41;
+}
+
+.heroTitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.25;
+
+  margin-bottom: 16px;
+}
+
+.heroText {
+  position: relative;
+
+  line-height: 1.5;
+  margin-bottom: 24px;
+  max-width: 280px;
+}
+
+.arMob {
+  position: absolute;
+  transform: translateY(-144%);
+  left: 70%;
+}

@@ -14,16 +14,24 @@ const Hero = () => {
           Старт: <span className={s.heroSpan}>10 січня 19:30</span>
         </h2>
         <h1 className={s.heroTitle}>
-          Навчіться створювати Excel-таблиці на pro-рівні
+          Навчіться створювати <br />
+          Excel-таблиці <br />
+          на pro-рівні
         </h1>
         <p className={s.heroText}>
-          Опануйте функціонал Microsoft Excel, автоматизуйте свою роботу та
-          створюйте таблиці швидко і в задоволення
+          Опануйте функціонал Microsoft Excel, автоматизуйте свою роботу <br />
+          та створюйте таблиці швидко <br />і в задоволення
         </p>
         {/* <svg className={s.arrowIcon}>
           <use href={`${icons}#icon-arrow-mob`} />
         </svg> */}
-        <img src={arMob} alt="arrow" width="40" height="40" />
+        <img
+          className={s.arMob}
+          src={arMob}
+          alt="arrow"
+          width="40"
+          height="40"
+        />
         <CountdownTimer />
       </Container>
     </section>
