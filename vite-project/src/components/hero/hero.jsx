@@ -1,11 +1,17 @@
-// import React from "react";
+// import React, { useState } from "react";
 // import s from "./hero.module.css";
 // import Container from "../container/container";
 // import arMob from "../../img/arMob.png";
 // import CountdownTimer from "../countdownTimer/countdownTimer.jsx";
-// // import icons from "../../img/icons.svg";
+// import RegForm from "../form/regForm.jsx";
 
 // const Hero = () => {
+//   const [showForm, setShowForm] = useState(false);
+
+//   const handleRegisterClick = () => {
+//     setShowForm(true);
+//   };
+
 //   return (
 //     <section className={s.hero}>
 //       <Container>
@@ -20,9 +26,8 @@
 //         </h1>
 //         <p className={s.heroText}>
 //           Опануйте функціонал Microsoft Excel, автоматизуйте свою роботу <br />
-//           та створюйте таблиці швидко <br />і в задоволення
+//           та створюйте таблиці швидко <br />и в задоволення
 //         </p>
-
 //         <img
 //           className={s.arMob}
 //           src={arMob}
@@ -33,8 +38,11 @@
 //         <div className={s.countWrap}>
 //           <h1 className={s.countTitle}>Реєструйся просто зараз</h1>
 //           <CountdownTimer />
-//           <button className={s.regBut}>Зареєструватися</button>
+//           <button className={s.regBut} onClick={handleRegisterClick}>
+//             Зареєструватися
+//           </button>
 //         </div>
+//         {showForm && <RegForm />}{" "}
 //       </Container>
 //     </section>
 //   );
@@ -54,6 +62,10 @@ const Hero = () => {
 
   const handleRegisterClick = () => {
     setShowForm(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowForm(false);
   };
 
   return (
@@ -86,7 +98,16 @@ const Hero = () => {
             Зареєструватися
           </button>
         </div>
-        {showForm && <RegForm />}{" "}
+        {showForm && (
+          <div className={s.modalOverlay}>
+            <div className={s.modalContent}>
+              <button className={s.closeButton} onClick={handleCloseModal}>
+                &times;
+              </button>
+              <RegForm />
+            </div>
+          </div>
+        )}
       </Container>
     </section>
   );
