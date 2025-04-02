@@ -71,22 +71,28 @@ const RegForm = () => {
             <ErrorMessage name="phone" component="div" className={s.error} />
 
             <label className={s.agreementLabel}>
-              <Field type="checkbox" name="agreement" className={s.checkbox} />
-              <div className={s.checkWrap}>
-                <p>
-                  Згоден з
-                  <span className={s.span}>
-                    <a href="#" className={s.link}>
-                      Політикою конфіденційності
-                    </a>
-                  </span>
-                  та
-                  <span className={s.span}>
-                    <a href="#" className={s.link}>
-                      Умовами користування послугами
-                    </a>
-                  </span>
-                </p>
+              <div className="wrap">
+                <Field
+                  type="checkbox"
+                  name="agreement"
+                  className={s.checkbox}
+                />
+                <div className={s.checkWrap}>
+                  <p>
+                    Згоден з
+                    <span className={s.span}>
+                      <a href="#" className={s.link}>
+                        Політикою конфіденційності
+                      </a>
+                    </span>
+                    та
+                    <span className={s.span}>
+                      <a href="#" className={s.link}>
+                        Умовами користування послугами
+                      </a>
+                    </span>
+                  </p>
+                </div>
               </div>
             </label>
             <ErrorMessage

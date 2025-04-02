@@ -23,13 +23,14 @@
 
 .checkbox {
   position: relative;
-  width: 20px;
+  width: 16px;
   height: 16px;
   border: 1px solid grey;
-  border-radius: 4px;
+
   appearance: none;
   cursor: pointer;
   margin-right: 5px;
+  flex-shrink: 0;
 }
 
 .checkbox::before {
@@ -87,4 +88,8 @@
 
 .span {
   margin-left: 2px;
+}
+
+.wrap {
+  display: flex;
 }
