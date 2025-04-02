@@ -7,11 +7,20 @@
   }
 }
 
-@media screen and (min-width: 390px) {
+@media screen and (min-width: 390px) and (max-width: 767px) {
   .container {
     max-width: 390px;
     padding-left: 16px;
     padding-right: 16px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
     margin: 0 auto;
   }
 }
