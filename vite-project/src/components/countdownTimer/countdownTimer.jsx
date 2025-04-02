@@ -1,40 +1,76 @@
-// import React, { useState, useEffect } from "react";
+// import React from "react";
+// import Countdown from "react-countdown";
 // import s from "./countdownTimer.module.css";
 
 // function CountdownTimer() {
 //   const targetDate = new Date("2025-05-01T00:00:00Z").getTime();
-//   const [timeRemaining, setTimeRemaining] = useState(targetDate - Date.now());
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setTimeRemaining(targetDate - Date.now());
-//     }, 1000);
-
-//     return () => clearInterval(interval);
-//   }, [targetDate]);
-
-//   const formatTime = (time) => {
-//     if (time <= 0) {
-//       return "00 Днів : 00 Годин : 00 Хвилин : 00 Секунд";
+//   const renderer = ({ days, hours, minutes, seconds, completed }) => {
+//     if (completed) {
+//       return (
+//         <div className={s.timeParts}>
+//           <div className={s.timeBlock}>
+//             <span className={s.timeNumber}>00</span>
+//             <span className={s.timeLabel}>днів</span>
+//           </div>
+//           <span className={s.separator}>:</span>
+//           <div className={s.timeBlock}>
+//             <span className={s.timeNumber}>00</span>
+//             <span className={s.timeLabel}>годин</span>
+//           </div>
+//           <span className={s.separator}>:</span>
+//           <div className={s.timeBlock}>
+//             <span className={s.timeNumber}>00</span>
+//             <span className={s.timeLabel}>хвилин</span>
+//           </div>
+//           <span className={s.separator}>:</span>
+//           <div className={s.timeBlock}>
+//             <span className={`${s.timeNumber} ${s.greenNumber}`}>00</span>
+//             <span className={s.timeLabel}>секунд</span>
+//           </div>
+//         </div>
+//       );
+//     } else {
+//       return (
+//         <div className={s.timeParts}>
+//           <div className={s.timeBlock}>
+//             <span className={s.timeNumber}>
+//               {String(days).padStart(2, "0")}
+//             </span>
+//             <span className={s.timeLabel}>днів</span>
+//           </div>
+//           <span className={s.separator}>:</span>
+//           <div className={s.timeBlock}>
+//             <span className={s.timeNumber}>
+//               {String(hours).padStart(2, "0")}
+//             </span>
+//             <span className={s.timeLabel}>годин</span>
+//           </div>
+//           <span className={s.separator}>:</span>
+//           <div className={s.timeBlock}>
+//             <span className={s.timeNumber}>
+//               {String(minutes).padStart(2, "0")}
+//             </span>
+//             <span className={s.timeLabel}>хвилин</span>
+//           </div>
+//           <span className={s.separator}>:</span>
+//           <div className={s.timeBlock}>
+//             <span className={`${s.timeNumber} ${s.greenNumber}`}>
+//               {String(seconds).padStart(2, "0")}
+//             </span>
+//             <span className={s.timeLabel}>секунд</span>
+//           </div>
+//         </div>
+//       );
 //     }
-
-//     const days = Math.floor(time / (1000 * 60 * 60 * 24));
-//     const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
-//     const minutes = Math.floor((time / (1000 * 60)) % 60);
-//     const seconds = Math.floor((time / 1000) % 60);
-
-//     return `${String(days).padStart(2, "0")} Днів : ${String(hours).padStart(
-//       2,
-//       "0"
-//     )} Годин : ${String(minutes).padStart(2, "0")} Хвилин : ${String(
-//       seconds
-//     ).padStart(2, "0")} Секунд`;
 //   };
 
 //   return (
 //     <div className={s.countContainer}>
 //       <h1 className={s.countTitle}>Реєструйся просто зараз</h1>
-//       <p className={s.countTime}>{formatTime(timeRemaining)}</p>
+//       <div className={s.countTime}>
+//         <Countdown date={targetDate} renderer={renderer} />
+//       </div>
 //       <button className={s.regBut}>Зареєструватися</button>
 //     </div>
 //   );
@@ -42,35 +78,14 @@
 
 // export default CountdownTimer;
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Countdown from "react-countdown";
 import s from "./countdownTimer.module.css";
 
 function CountdownTimer() {
   const targetDate = new Date("2025-05-01T00:00:00Z").getTime();
-  const [timeRemaining, setTimeRemaining] = useState(targetDate - Date.now());
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTimeRemaining(targetDate - Date.now());
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [targetDate]);
-
-  const formatTime = (time) => {
-    if (time <= 0) {
-      return formatTimeParts(0, 0, 0, 0);
-    }
-
-    const days = Math.floor(time / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((time / (1000 * 60)) % 60);
-    const seconds = Math.floor((time / 1000) % 60);
-
-    return formatTimeParts(days, hours, minutes, seconds);
-  };
-
-  const formatTimeParts = (days, hours, minutes, seconds) => {
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
     const timeParts = [
       { value: days, label: "днів" },
       { value: hours, label: "годин" },
@@ -81,21 +96,19 @@ function CountdownTimer() {
     return (
       <div className={s.timeParts}>
         {timeParts.map((part, index) => (
-          <>
-            <div className={s.timeBlock} key={index}>
+          <React.Fragment key={index}>
+            <div className={s.timeBlock}>
               <span
                 className={
                   s.timeNumber + (part.isGreen ? ` ${s.greenNumber}` : "")
                 }
               >
-                {String(part.value).padStart(2, "0")}
+                {completed ? "00" : String(part.value).padStart(2, "0")}
               </span>
               <span className={s.timeLabel}>{part.label}</span>
             </div>
-            {index < timeParts.length - 1 && (
-              <span className={s.separator}>:</span>
-            )}
-          </>
+            {index < timeParts.length - 1 && <span className={s.dot}>:</span>}
+          </React.Fragment>
         ))}
       </div>
     );
@@ -104,7 +117,9 @@ function CountdownTimer() {
   return (
     <div className={s.countContainer}>
       <h1 className={s.countTitle}>Реєструйся просто зараз</h1>
-      <p className={s.countTime}>{formatTime(timeRemaining)}</p>
+      <div className={s.countTime}>
+        <Countdown date={targetDate} renderer={renderer} />
+      </div>
       <button className={s.regBut}>Зареєструватися</button>
     </div>
   );

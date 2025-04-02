@@ -1,40 +1,3 @@
-/* .countContainer {
-  margin: 0 auto;
-  text-align: center;
-  padding: 32px 20px;
-  background-color: #fff;
-  box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
-}
-
-.countTitle {
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 24px;
-}
-
-.countTime {
-  display: flex;
-}
-
-.regBut {
-  background-color: #0f7c41;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  font-weight: 700;
-  line-height: 1.5;
-  cursor: pointer;
-  width: 280px;
-  height: 56px;
-  margin: 0 auto;
-  transition: background-color 0.5s ease;
-}
-
-.regBut:hover {
-  background-color: darkcyan;
-} */
-
 .countContainer {
   margin: 0 auto;
   text-align: center;
@@ -50,15 +13,12 @@
 }
 
 .countTime {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .timeParts {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
 }
 
 .timeBlock {
@@ -68,9 +28,8 @@
 }
 
 .timeNumber {
-  font-size: 36px;
-  font-weight: bold;
-  color: black;
+  font-weight: 700;
+  font-size: 28px;
 }
 
 .greenNumber {
@@ -78,8 +37,13 @@
 }
 
 .timeLabel {
-  font-size: 14px;
-  color: gray;
+  font-size: 8px;
+}
+
+.dot {
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 8px;
 }
 
 .regBut {
