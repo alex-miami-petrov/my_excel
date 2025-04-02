@@ -1,25 +1,102 @@
-.countContainer {
+/* .countContainer {
+  margin: 0 auto;
   text-align: center;
-  padding: 20px 32px;
+  padding: 32px 20px;
   background-color: #fff;
   box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
 }
 
 .countTitle {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 24px;
 }
 
 .countTime {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 20px;
+  display: flex;
 }
 
 .regBut {
-  background-color: #28a745; /* Зелений колір кнопки */
+  background-color: #0f7c41;
   color: white;
-  padding: 10px 20px;
+  font-size: 16px;
   border: none;
   border-radius: 5px;
-  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
   cursor: pointer;
+  width: 280px;
+  height: 56px;
+  margin: 0 auto;
+  transition: background-color 0.5s ease;
+}
+
+.regBut:hover {
+  background-color: darkcyan;
+} */
+
+.countContainer {
+  margin: 0 auto;
+  text-align: center;
+  padding: 32px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
+}
+
+.countTitle {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.countTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeParts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.timeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeNumber {
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+}
+
+.greenNumber {
+  color: green;
+}
+
+.timeLabel {
+  font-size: 14px;
+  color: gray;
+}
+
+.regBut {
+  background-color: #0f7c41;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+  width: 280px;
+  height: 56px;
+  margin: 0 auto;
+  transition: background-color 0.5s ease;
+}
+
+.regBut:hover {
+  background-color: darkcyan;
 }
