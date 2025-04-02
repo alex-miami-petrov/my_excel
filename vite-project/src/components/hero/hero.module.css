@@ -7,11 +7,30 @@
 .heroSub {
   display: inline-block;
   font-weight: 500;
+  font-size: 14px;
   margin-bottom: 16px;
   letter-spacing: 0.08em;
   color: #0f7c41;
   padding: 4px 8px;
   border: 0.4px solid #0f7c41;
+  width: 207px;
+  text-align: center;
+}
+
+.heroSubTwo {
+  width: 230px;
+  display: block;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 14px;
+  color: #0f7c41;
+  padding: 4px 8px;
+  text-align: center;
+  border: 0.4px solid #0f7c41;
+  margin-bottom: 24px;
+  width: 188px;
+  letter-spacing: 0.08em;
 }
 
 .heroSpan {
@@ -46,6 +65,8 @@
 }
 
 .countWrap {
+  display: flex;
+  flex-direction: column;
   padding: 32px 20px;
   background-color: #fff;
   box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
@@ -138,9 +159,22 @@
     box-sizing: border-box;
     line-height: 1.5;
     font-size: 16px;
-    width: 230px;
+    width: 252px;
     padding: 8px 16px;
     text-align: center;
+  }
+
+  .heroSubTwo {
+    width: 230px;
+    display: block;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #0f7c41;
+    padding: 8px 16px;
+    text-align: center;
+    border: 0.4px solid #0f7c41;
+    margin-bottom: 24px;
   }
 
   .heroTitle {
