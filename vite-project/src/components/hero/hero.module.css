@@ -13,7 +13,7 @@
   color: #0f7c41;
   padding: 4px 8px;
   border: 0.4px solid #0f7c41;
-  width: 207px;
+  width: 230px;
   text-align: center;
 }
 
@@ -29,7 +29,7 @@
   text-align: center;
   border: 0.4px solid #0f7c41;
   margin-bottom: 24px;
-  width: 188px;
+  max-width: 188px;
   letter-spacing: 0.08em;
 }
 
@@ -165,9 +165,9 @@
   }
 
   .heroSubTwo {
-    width: 230px;
-    display: block;
-    box-sizing: border-box;
+    width: 240px;
+    display: inline-block;
+
     line-height: 1.5;
     font-size: 16px;
     color: #0f7c41;
