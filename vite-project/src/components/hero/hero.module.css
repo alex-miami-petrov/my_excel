@@ -110,8 +110,8 @@
 /* TABLET */
 
 @media screen and (min-width: 769px) and (max-width: 1439px) {
-  .header {
-    padding-top: 30px;
+  .heroWrapper {
+    display: flex;
   }
 
   .heroSub {

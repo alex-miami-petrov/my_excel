@@ -166,39 +166,49 @@ const Hero = () => {
   return (
     <section className={s.hero}>
       <Container>
-        <h2 className={s.heroSub}>Безоплатний вебінар</h2>
-        <h2 className={s.heroSub}>
-          Старт: <span className={s.heroSpan}>10 січня 19:30</span>
-        </h2>
-        <h1 className={s.heroTitle}>
-          Навчіться створювати <br />
-          Excel-таблиці <br />
-          на pro-рівні
-        </h1>
-        <div className={s.positionWrap}>
-          <div className={s.textWrap}>
-            <p className={s.heroText}>
-              Опануйте функціонал Microsoft Excel, автоматизуйте свою роботу{" "}
-              <br />
-              та створюйте таблиці швидко <br />и в задоволення
-            </p>
-          </div>
-          <div className={s.imgWrap}>
-            <img
-              className={s.arMob}
-              src={arMob}
-              alt="arrow"
-              width="40"
-              height="40"
-            />
+        <div className={s.heroWrapper}>
+          <div className={s.contentWrap}>
+            <h2 className={s.heroSub}>Безоплатний вебінар</h2>
+            <h2 className={s.heroSub}>
+              Старт: <span className={s.heroSpan}>10 січня 19:30</span>
+            </h2>
+            <h1 className={s.heroTitle}>
+              Навчіться створювати <br />
+              Excel-таблиці <br />
+              на pro-рівні
+            </h1>
+            <div className={s.positionWrap}>
+              <div className={s.textWrap}>
+                <p className={s.heroText}>
+                  Опануйте функціонал Microsoft Excel, автоматизуйте свою роботу{" "}
+                  <br />
+                  та створюйте таблиці швидко <br />и в задоволення
+                </p>
+              </div>
+              <div className={s.imgWrap}>
+                <img
+                  className={s.arMob}
+                  src={arMob}
+                  alt="arrow"
+                  width="40"
+                  height="40"
+                />
 
-            <img
-              className={s.arTab}
-              src={arTab}
-              alt="arrow"
-              width="48"
-              height="48"
-            />
+                <img
+                  className={s.arTab}
+                  src={arTab}
+                  alt="arrow"
+                  width="48"
+                  height="48"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className={s.formWrap}>
+            <h1 className={s.countTitle}>Реєструйся просто зараз</h1>
+            <CountdownTimer />
+            <RegForm onSubmit={handleFormSubmit} isLoading={isLoading} />
           </div>
         </div>
 
