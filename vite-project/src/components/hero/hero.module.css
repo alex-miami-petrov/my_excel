@@ -113,6 +113,10 @@
   .hero {
     padding-bottom: 164px;
   }
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .heroWrapper {
     display: flex;
     justify-content: space-between;
@@ -122,6 +126,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     padding-top: 32px;
     padding-bottom: 32px;
     min-width: 336px;
@@ -216,7 +221,7 @@
 
   .imgWrap {
     top: 90%;
-    right: 50%;
+    right: -10%;
     transform: translate(50%, -50%);
   }
 
@@ -246,5 +251,25 @@
     padding-bottom: 0px;
     margin-bottom: 16px;
     box-sizing: content-box;
+  }
+  .formWrap {
+    display: grid;
+    flex-direction: column;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    max-width: 488px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heroWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .countTitle {
+    margin: 0;
   }
 }

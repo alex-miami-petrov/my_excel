@@ -36,3 +36,9 @@
   color: grey;
   border-radius: 50%;
 }
+
+@media screen and (min-width: 1440px) {
+  .timeParts {
+    margin: 0;
+  }
+}
