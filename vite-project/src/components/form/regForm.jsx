@@ -75,7 +75,7 @@ const RegForm = () => {
                 <Field
                   name="phone"
                   placeholder="+380 95 -- --- --"
-                  className={s.input}
+                  className={`${s.input} ${s.phoneInputWithIcon}`}
                 />
               </div>
               <ErrorMessage name="phone" component="div" className={s.error} />

@@ -7,6 +7,7 @@
   border: none;
   margin-bottom: 20px;
   color: #010101;
+  box-sizing: border-box;
 }
 
 .error {
@@ -109,6 +110,10 @@
   position: absolute;
   left: 16px;
   top: 12px;
+}
+
+.phoneInputWithIcon {
+  padding-left: 48px;
 }
 
 /* TABLET */
