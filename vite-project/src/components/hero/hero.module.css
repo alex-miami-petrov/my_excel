@@ -255,8 +255,8 @@
   .formWrap {
     display: grid;
     flex-direction: column;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 52px;
+    padding-bottom: 52px;
     max-width: 488px;
     background-color: #fff;
     box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
