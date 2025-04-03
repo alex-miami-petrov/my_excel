@@ -181,6 +181,9 @@
 /* DESK */
 
 @media screen and (min-width: 1440px) {
+  .hero {
+    padding-bottom: 110px;
+  }
   .heroSub {
     display: inline-block;
   }
@@ -209,6 +212,12 @@
 
   .arDesk {
     display: block;
+  }
+
+  .imgWrap {
+    top: 90%;
+    right: 50%;
+    transform: translate(50%, -50%);
   }
 
   .countWrap {
