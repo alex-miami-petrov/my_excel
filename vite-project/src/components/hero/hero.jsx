@@ -3,6 +3,7 @@ import s from "./hero.module.css";
 import Container from "../container/container";
 import arMob from "../../img/arMob.png";
 import arTab from "../../img/arTab.png";
+import arDesk from "../../img/arDesk.png";
 import CountdownTimer from "../countdownTimer/countdownTimer.jsx";
 import Modal from "../modal/modal.jsx";
 import RegForm from "../form/regForm.jsx";
@@ -62,10 +63,13 @@ const Hero = () => {
       <Container>
         <div className={s.heroWrapper}>
           <div className={s.contentWrap}>
-            <h2 className={s.heroSub}>Безоплатний вебінар</h2>
-            <h2 className={s.heroSubTwo}>
-              Старт: <span className={s.heroSpan}>10 січня 19:30</span>
-            </h2>
+            <div className={s.subWrap}>
+              <h2 className={s.heroSub}>Безоплатний вебінар</h2>
+              <h2 className={s.heroSubTwo}>
+                Старт: <span className={s.heroSpan}>10 січня 19:30</span>
+              </h2>
+            </div>
+
             <h1 className={s.heroTitle}>
               Навчіться створювати <br />
               Excel-таблиці <br />
@@ -92,8 +96,16 @@ const Hero = () => {
                   className={s.arTab}
                   src={arTab}
                   alt="arrow"
-                  width="48"
-                  height="48"
+                  width="82"
+                  height="82"
+                />
+
+                <img
+                  className={s.arDesk}
+                  src={arDesk}
+                  alt="arrow"
+                  width="82"
+                  height="82"
                 />
               </div>
             </div>
